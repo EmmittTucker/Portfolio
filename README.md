@@ -8,10 +8,12 @@ Outside of programming I enjoy gaming and movie culture (particularly horror mov
 If you would like to connect, please reach out on LinkedIn and mention that you found me through this portfolio (Link: https://www.linkedin.com/in/emmitt-tucker-45ba52159/).
 ## Current Projects
 This section covers the current projects I work on in my free-time.<br>
+### tinytroupe - EmiteStudios
+This is a project built upon the tinytroupe python module. 
 ### Project Aquarium
 This is a project inspired by my background in biology and interest in **natural selection** and **selective pressure**. The focus of this work is **simulated experimental evolution**. This project contains a simulation that uses cooperative NeuroEvolution to produce classificatication artificial neural network candiates for further investigation. In the simulation, neural network systems are represented as individual "fish" that move around their environment. The goal of this project is to both visualize and automate neural network optimization. 
 <br><br>
-This project was heavily assisted with the help of prompt engineering using **OpenAI's chatGPT-o3-mini model**. This model did a decent job with handling requests, although it would sometimes give me answers to previous questions when prompted. One consistent error I found was that it would have to be reminded of how changes it made effected the rest of the code base. the o3-mini model was also somewhat helpful when it came to understanding how neural networks worked. It was not helpfull when it came to trying to figure out different evolution mechanics that would lead to better results. This may have been the result of me telling the o3-mini model to specialize as an AI specialist at the start of the conversation. 
+This project was heavily assisted with the help of prompt engineering using **OpenAI's chatGPT-o3-mini model**. This model did a decent job with handling requests, although it would sometimes give me answers to previous questions when prompted. One consistent error I found was that it would have to be reminded of how changes it made effected the rest of the code base. The o3-mini model was also somewhat helpful when it came to understanding how neural networks worked. It was not helpfull when it came to trying to figure out different evolution mechanics that would lead to better results. This may have been the result of me telling the o3-mini model to specialize as an AI specialist at the start of the conversation. 
 <br><br>
 The systems of the fish are made of 5 different neural networks that control the behavior and survival chances.Their movement is controlled by the **Behavior Net** (B-Net). This network learns over time and adapts movement if the individual is not finding resources. Individuals are spawned with no movement memory, and they learn better patterns throughout their lifetime (ideally). The behavior network processes a scalar value depending on what **mode** this fish is in which determines what actions it does in the environment. The output of the network is interpreted as an angular change in the fishes direction. 
 <br><br>
@@ -26,13 +28,8 @@ My idea was that selective pressure applied to the neural networks through compe
 In order to introduce adaptation into the simulation, there is a global mutation rate. The mutation rate along with the respawn rate seem to determine how rapidly the population of solutions is explored. A high mutation rate runs the risk of removing helpful mutations from adapting in the fish population. A low mutation rate runs the risk of letting the individuals being unable to adapt if the starting population is poor. There is also crossover that can occur between the feaure chromosomes during reproduction. Through mutation and crossover, the neural network space is searched for optimal solutions to survive in the environment. I made changes for the activation functions per layer to be explored through mutation and crossover. This added signicant complexity to the search space. I added this feature because my knowledge of neural networks is somewhat lacking, so I would not know how to initalize the right activation function before the simulation started. 
 <br><br>
 The look of the fish is inspired by the features of their different networks. The head, which is solid white, is the only part of the all creatures which is consistent. Every fish has an oval body that's color depends on the majority composition of their neural network's activation layer. Their body color will vary from white to a darkened version of their assinged color depending on what energy level they have. The fish body (including the fins and tail) scales with the level of energy the individual currently has. The fins vary in size depending on the number of features/input nodes the classification network has. The tail of the fish vary in lenght depending on the number of hidden layers in their classification network. I added eyes to the in an attempt to track ancestry, but I may need to update the implementation because most times they eyes converge on a single color. 
-<br><br>
-#### Observations
-From my experiments so far, I have observed several consistent events with the current settings. 
-#### Future Work
-
 ## Previous Projects
-
+These are some previous projects I have worked on. 
 ### Neural Network War
 
 ### Abusrd-i-Oh!
